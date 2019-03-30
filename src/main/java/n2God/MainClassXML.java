@@ -6,7 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @SpringBootApplication
-public class MainClass {
+public class MainClassXML {
 
     static SimpleClassInfo info;
     static HelloWorld hello;
