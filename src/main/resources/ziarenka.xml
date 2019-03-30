@@ -3,8 +3,22 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<bean id="simple_1" class="n2God.SimpleClassInfo">
+    <bean id="simple_1" class="n2God.SimpleClassInfo">
 
-</bean>
+    </bean>
+
+    <bean id="simple_2" class="n2God.SimpleClassInfo">
+        <constructor-arg value="News z ostatniej chwili!" index="1"></constructor-arg>
+        <constructor-arg value="1" index="0"></constructor-arg>
+    </bean>
+
+    <bean id="simple_3" class="n2God.SimpleClassInfo">
+        <property name="id" value="3"></property>
+        <property name="info" value="Masakra na Times Square!"></property>
+    </bean>
+
+    <bean id="simple_4" class="n2God.SimpleClassInfo">
+        <constructor-arg value="News z poprzedniej chwili - uzyto konstruktora z 1 parametrem"></constructor-arg>
+    </bean>
 
 </beans>

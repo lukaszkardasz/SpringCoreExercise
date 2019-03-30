@@ -13,6 +13,9 @@ public class MainClass {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("ziarenka.xml");
         info = context.getBean("simple_1", SimpleClassInfo.class);
+        info = context.getBean("simple_2", SimpleClassInfo.class);
+        info = context.getBean("simple_3", SimpleClassInfo.class);
+        info = context.getBean("simple_4", SimpleClassInfo.class);
 
         System.out.println(info);
     }

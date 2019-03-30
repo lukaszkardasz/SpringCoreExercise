@@ -10,6 +10,11 @@ public class SimpleClassInfo {
         this.info = info;
     }
 
+    public SimpleClassInfo(String info){
+        this.info = info;
+        this.id = -1;
+    }
+
     public SimpleClassInfo(){
 
     }
