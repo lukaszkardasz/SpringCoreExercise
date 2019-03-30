@@ -8,25 +8,39 @@
     </bean>
 
     <bean id="simple_2" class="n2God.SimpleClassInfo">
-        <constructor-arg value="News z ostatniej chwili!" index="1"></constructor-arg>
-        <constructor-arg value="1" index="0"></constructor-arg>
+        <constructor-arg value="News z ostatniej chwili!" index="1"/>
+        <constructor-arg value="1" index="0"/>
     </bean>
 
     <bean id="simple_3" class="n2God.SimpleClassInfo">
-        <property name="id" value="3"></property>
-        <property name="info" value="Masakra na Times Square!"></property>
+        <property name="id" value="3"/>
+        <property name="info" value="Masakra na Times Square!"/>
     </bean>
 
     <bean id="simple_4" class="n2God.SimpleClassInfo">
-        <constructor-arg value="News z poprzedniej chwili - uzyto konstruktora z 1 parametrem"></constructor-arg>
+        <constructor-arg value="News z poprzedniej chwili - uzyto konstruktora z 1 parametrem"/>
     </bean>
 
     <bean id="hello_1" class="n2God.HelloWorld">
-        <constructor-arg value="Master!"></constructor-arg>
+        <constructor-arg value="Master!"/>
     </bean>
 
     <bean id="hello_2" class="n2God.HelloWorld">
-        <property name="greet" value="Elo siema!"></property>
+        <property name="greet" value="Elo siema!"/>
+    </bean>
+
+    <bean id="adres_1" class="n2God.employee.Address">
+        <property name="city" value="Białystok"/>
+        <property name="homeNumber" value="123"/>
+    </bean>
+
+    <bean id="adres_2" class="n2God.employee.Address">
+        <property name="city" value="Warszawa"/>
+        <property name="homeNumber" value="321"/>
+    </bean>
+
+    <bean id="director_1" class="n2God.employee.Director">
+        <property name="address" ref="adres_2"/>
     </bean>
 
 </beans>

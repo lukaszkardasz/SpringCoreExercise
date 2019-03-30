@@ -1,5 +1,6 @@
 package n2God;
 
+import n2God.employee.Director;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -17,11 +18,14 @@ public class MainClass {
         info = context.getBean("simple_2", SimpleClassInfo.class);
         info = context.getBean("simple_3", SimpleClassInfo.class);
         info = context.getBean("simple_4", SimpleClassInfo.class);
+        System.out.println(info);
         hello = context.getBean("hello_1", HelloWorld.class);
         hello.sayHello();
         hello = context.getBean("hello_2", HelloWorld.class);
         hello.sayHello();
+        Director director = context.getBean("director_1", Director.class);
+        director.printAdress();
 
-        System.out.println(info);
+
     }
 }
