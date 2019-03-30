@@ -21,4 +21,12 @@
         <constructor-arg value="News z poprzedniej chwili - uzyto konstruktora z 1 parametrem"></constructor-arg>
     </bean>
 
+    <bean id="hello_1" class="n2God.HelloWorld">
+        <constructor-arg value="Master!"></constructor-arg>
+    </bean>
+
+    <bean id="hello_2" class="n2God.HelloWorld">
+        <property name="greet" value="Elo siema!"></property>
+    </bean>
+
 </beans>

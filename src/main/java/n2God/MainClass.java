@@ -8,6 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class MainClass {
 
     static SimpleClassInfo info;
+    static HelloWorld hello;
 
     public static void main(String[] args) {
 
@@ -16,6 +17,10 @@ public class MainClass {
         info = context.getBean("simple_2", SimpleClassInfo.class);
         info = context.getBean("simple_3", SimpleClassInfo.class);
         info = context.getBean("simple_4", SimpleClassInfo.class);
+        hello = context.getBean("hello_1", HelloWorld.class);
+        hello.sayHello();
+        hello = context.getBean("hello_2", HelloWorld.class);
+        hello.sayHello();
 
         System.out.println(info);
     }
