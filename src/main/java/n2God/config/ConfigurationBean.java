@@ -9,28 +9,38 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-
+import org.springframework.context.annotation.Scope;
 
 
 @Configuration
-@Import(AddressConfig.class)
+@Import({AddressConfig.class, PersonConfig.class})
 public class ConfigurationBean {
 
     @Autowired
     @Qualifier("default")
     private Address address;
 
-
-    @Bean
-    public Employee person(){
-        Director d = new Director();
-        d.setAddress(address);
-        return d;
-    }
+    @Autowired
+    @Qualifier("director")
+    private Employee person;
 
     @Bean //po tej nazwie szuka bina
     public HelloWorld hello(){
         return new HelloWorld("Welcome ...");
     }
+
+    @Bean
+    @Scope(value = "prototype")
+    public Employee person(){
+        return person;
+    }
+
+    @Bean
+    @Scope(value = "prototype")
+    public Employee person2(){
+        person.printAdress();
+        return person;
+    }
+
 
 }

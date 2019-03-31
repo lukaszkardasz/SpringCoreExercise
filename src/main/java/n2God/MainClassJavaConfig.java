@@ -14,5 +14,8 @@ public class MainClassJavaConfig {
 
         Employee e = context.getBean("person", Employee.class);
         e.printAdress();
+
+        e = context.getBean("person2", Employee.class);
+        e.printAdress();
     }
 }

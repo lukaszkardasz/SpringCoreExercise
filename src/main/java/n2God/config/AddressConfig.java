@@ -3,8 +3,10 @@ package n2God.config;
 import n2God.employee.Address;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
+@PropertySource("classpath: config.properties")
 public class AddressConfig {
 
     @Bean(name = "default")

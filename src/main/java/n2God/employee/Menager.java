@@ -1,13 +1,14 @@
 package n2God.employee;
 
-public class Director implements Employee{
+public class Menager implements Employee {
+
     private Address address;
 
-    public Director(Address address) {
+    public Menager(Address address) {
         this.address = address;
     }
 
-    public Director(){
+    public Menager(){
 
     }
 
